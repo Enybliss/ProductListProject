@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: whitesmoke;
+}
+
+h2{
+    padding-left: 36px;
+    color: #2b1d02;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-lists{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 20px;
+    width: 70%;
+
+    
+}
+
+.productcard {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 5px;
+    position: relative;
+}
+
+.productcard img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
+.add-to-cart{
+    background-color: white;
+    border: 1px solid #f9cbcb;
+    color: #030303;
+    display: flex;
+    border-radius: 20px;
+    margin: 5px auto;
+    padding: 10px 25px ;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    left: 50px;
+    top: 210px;
+
+  
+}
+
+.add-to-cart img{
+    height: 20px;
+    width: 20px;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ead8cf;
+}
+
+.productInfo {
+    padding-top: 30px;
+    line-height: 20px;
+}
+
+.productName {
+    font-size: 0.9em;
+    color: #aca28b;
+}
+
+.productTitle {
+    font-size: 0.9em;
+    color: #382809;
+}
+
+.productPrice{
+    font-size: 1em;
+    font-weight: bold;
+    color: #b86a1e;
+
+
+}
+
+.cartSection{
+    background-color: white;
+    border: 1px solid #faf7f7;
+    box-shadow: #ddd;
+    width: 28%;
+    height: 500px;
+    border-radius: 8px;
+    padding: 20px ;
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+}
+
+.cartItems{
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.cartSection h2{
+    padding: 2px;
+    color: #b86a1e;
+    font-weight: bold;
+}
+
+.cartItems img{
+    margin-left: 50px;
+    width: 200px;
+}
+
+.cartItems p{
+    margin-left: 50px;
+    font-size: small;
+    color: #432714;
+}
+
+.cartTotal h3{
+   font-size: 1.2em; 
+   font-weight: bold;
+   margin-bottom: 30px;
+   color: #69470d;
+
+}
+
+#total-amount{
+    color: #122902;
+}
+
+.deliveryInfo{
+    display: flex;
+    color: gray;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    background-color: #f0f4f0;
+    height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.deliveryInfo span{
+    font-weight: bold;
+    font-size: 1em;
+    color: #7dae7d;
+}
+
+.deliveryInfo img{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.confirm-delivery{
+    background-color: #f2826b ;
+    display: block;
+    width: 250px;
+    margin: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    font-size: 1em;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-delivery:hover {
+    background-color: #b86a1e;
+}
+
+.orderConfirmationCard {
+    display: none;
+    position: fixed;
+    bottom: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px #0000001a ;
+
+}
+
+.orderConfirmationCard .card-content {
+    text-align: center;
+}
+
+.orderConfirmationCard h2{
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.orderConfirmationCard p{
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #555;
+
+}
+
+.orderConfirmationCard .ordered-items h3{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.order-confirmation-card .ordered-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .order-confirmation-card .ordered-items li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+  }
+  
+  .order-confirmation-card .total-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .order-confirmation-card .total-price span {
+    color: #333;
+  }
+  
+  .order-confirmation-card #confirm-order {
+    background-color: #8e1b04; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .order-confirmation-card #confirm-order:hover {
+    background-color: #b8912f; 
+  
+  }
+  
+  .order-confirmation-card .ordered-items img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 884px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-grid {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  
+    .cart-section {
+      width: 90%;
+      margin-top: 20px;
+    }
+  
+    /* Button responsiveness for larger mobile/tablet */
+    .add-to-cart {
+      font-size: 0.9em; /* Slightly smaller text */
+      padding: 10px 20px; /* Adjust padding */
+    }
+  
+    .add-to-cart img {
+      height: 18px;
+      width: 18px;
+    }
+  }
+  
+  /* Combine both @media (max-width: 600px) queries */
+  @media (max-width: 600px) {
+    .cart-section {
+      width: 100%; /* Make cart section full width on smaller screens */
+      height: auto; /* Allow it to adjust height */
+      order: 2;
+      margin-top: 30px;
+    }
+  
+    .delivery-info {
+      height: 60px;
+      padding: 8px;
+    }
+  
+    .confirm-delivery {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  
+    .product-grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
+  
+    .product-card img {
+      height: 200px;
+      width: 280px;
+    }
+  
+    .add-to-cart {
+      width: 150px !important;
+      font-size: 0.85em; /* Smaller button text */
+      padding: 8px 16px; /* Adjust button padding */
+      bottom: 26px !important;
+    }
+  
+    .add-to-cart img {
+      height: 16px;
+      width: 16px;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    body {
+      padding: 20px;
+    }
+  
+    .product-card img {
+      height: 180px;
+    }
+  
+    .add-to-cart {
+      font-size: 0.8em;
+      padding: 7px 14px; /* Further adjust padding for smaller screens */
+    }
+  
+    .add-to-cart img {
+      height: 14px;
+      width: 14px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    body {
+      padding: 0px;
+    }
+  
+    .product-card img {
+      height: 150px;
+    }
+  
+    .add-to-cart {
+      font-size: 0.75em;
+      padding: 6px 12px;
+    }
+  
+    .add-to-cart img {
+      height: 12px;
+      width: 12px;
+    }
+  }
+  
+
+
